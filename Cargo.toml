@@ -1,0 +1,7 @@
+[package]
+name = "rustPassGenerator"
+version = "0.1.0"
+authors = ["ahotchenkov <hotchenkov@list.ru>"]
+
+[dependencies]
+rand = "*"
