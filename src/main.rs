@@ -4,19 +4,19 @@ use rand::Rng;
 
 fn pass_generator(){
 
-	let  array="qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlLzZxXcCvVbBnNmM1234567890!@#".chars();
-
-	let mut pass=String::new();
-
-	for x in array{
-		let number=rand::thread_rng().gen_range(0,60) as usize;
-		pass.push(Some(array.nth(number).unwrap()));
+	let string_pass_chars="qQwWeErRtTyYuUiIoOpPaAsSdDfFgGhHjJkKlLzZxXcCvVbBnNmM1234567890!@#";
+	let mut pass= String::new();
+	while(pass.len()<13){
+		let number=rand::thread_rng().gen_range(0,65);
+		let char_=string_pass_chars.chars().nth(number).unwrap();
+		pass.push(char_);
 	}	
 	println!("{}",pass);
 }
 
 fn main(){
 
+		println!("You password generated: ");
 		pass_generator();
 
 }
